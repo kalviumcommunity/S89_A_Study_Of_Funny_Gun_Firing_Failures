@@ -13,3 +13,6 @@
  
 
  ## **Why This Project**: I chose this project because it combines humor and education, offering a fresh perspective on common firearm malfunctions. It's an engaging way to teach safety while making learning enjoyable. By working on this project, I’ll sharpen my skills in frontend and backend development, interactive design, and community-driven content—while contributing to an entertaining and informative user experience.It's an engaging way to teach safety while making learning enjoyable.
+ASAP-BRU
+ ## **Why This Project**: I chose this project because it combines humor and education, offering a fresh perspective on common firearm malfunctions. It's an engaging way to teach safety while making learning enjoyable. By working on this project, I’ll sharpen my skills in frontend and backend development, interactive design, and community-driven content—while contributing to an entertaining and informative user experience.It's an engaging way to teach safety while making learning enjoyable.
+main
