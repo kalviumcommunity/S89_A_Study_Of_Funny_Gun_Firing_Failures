@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
@@ -15,6 +14,9 @@ app.get("/ping", (req, res) => {
 });
 
 
+
+
+
 app.listen(3000, async() => {
     try{
         await mongoose.connect(process.env.MONGO_URL);
@@ -23,21 +25,4 @@ app.listen(3000, async() => {
         console.log("Error")
     }
     
-=======
-const express = require('express');
-
-const app = express();
-const port = 3000;
-
-app.get('/ping', (req, res) => {
-    res.send('pong');
-});
-
-app.listen(port, (err) => {
-    if (err) {
-        console.error('Error occurred while starting the server:', err);
-        return;
-    }
-    console.log(`Server is running on http://localhost:${port}`);
->>>>>>> 6673e42839ef7eb2f392e1ff1b770710748a760c
 });
