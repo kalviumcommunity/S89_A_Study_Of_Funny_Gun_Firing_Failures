@@ -1,0 +1,20 @@
+meta {
+  name: post funny
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/api/funny
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "description": "Gun jammed due to bad ammo",
+    "failureType": "Jam",
+    "remainder": "2025-06-01"
+  }
+  
+}

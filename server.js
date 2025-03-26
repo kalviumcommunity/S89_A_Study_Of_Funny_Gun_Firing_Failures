@@ -1,33 +1,30 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-dotenv.config();
+// server.js
+const express = require('express');
+const mongoose = require('mongoose');
+const routes = require('./routes');  // Import the routes
 
 const app = express();
 
-app.get("/ping", (req, res) => {
-    try {
-        res.status(200).send({ msg: "pong" });
-    } catch (error) {
-        res.status(500).send({ msg: "Server error occurred", error: error.message });
-    }
-});
+// Middleware to parse JSON request bodies
+app.use(express.json());
 
+app.get("/ping",(req,res)=>{
+    res.send("pong")
+})
 
+// MongoDB connection
+mongoose.connect('mongodb+srv://kushalmandala123:LGtfg7qwOjFM0NSn@cluster0.fbqxb.mongodb.net/', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('Could not connect to MongoDB', err));
 
+// Use the routes
+app.use('/api', routes);
 
-
-
-
-
-
-
-app.listen(3000, async() => {
-    try{
-        await mongoose.connect(process.env.MONGO_URL);
-        console.log("Server connected successfully")
-    }catch(error){
-        console.log("Error")
-    }
-    
+// Start the server
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
