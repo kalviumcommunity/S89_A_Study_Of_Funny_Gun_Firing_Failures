@@ -1,0 +1,115 @@
+meta {
+  name: POST ASAP
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/api/funny
+  body: json
+  auth: inherit
+}
+
+body:json {
+  [
+    {
+      "FailureScenario": {
+        "id": 1,
+        "date": "2025-03-25T10:45:00",
+        "location": "Shooting Range, Phoenix",
+        "typeOfFailure": "Misfire",
+        "weaponType": "Handgun",
+        "duration": "5 seconds"
+      }
+    },
+    {
+      "Weapon": {
+        "id": 1,
+        "model": "Glock 19",
+        "manufacturer": "Glock",
+        "caliber": "9mm",
+        "failureCount": 2
+      }
+    },
+    {
+      "User": {
+        "id": 1,
+        "name": "John Doe",
+        "age": 28,
+        "experienceLevel": "Novice",
+        "previousFailures": 3
+      }
+    },
+    {
+      "FailureType": {
+        "id": 1,
+        "type": "Misfire",
+        "description": "The cartridge fails to fire when the trigger is pulled.",
+        "commonality": "Common"
+      }
+    },
+    {
+      "FailureCause": {
+        "id": 1,
+        "cause": "Faulty Ammunition",
+        "severity": "Major",
+        "relevance": "High"
+      }
+    },
+    {
+      "Ammo": {
+        "id": 1,
+        "caliber": "9mm",
+        "brand": "Winchester",
+        "type": "FMJ",
+        "failureRate": "Low"
+      }
+    },
+    {
+      "MaintenanceLog": {
+        "id": 1,
+        "weaponId": 1,
+        "serviceDate": "2025-03-01",
+        "servicePerformed": "Replaced firing pin and cleaned chamber",
+        "technician": "Sarah Smith"
+      }
+    },
+    {
+      "FailureEvent": {
+        "id": 1,
+        "scenarioId": 1,
+        "userId": 1,
+        "weaponId": 1,
+        "causeId": 1,
+        "timeToResolve": "30 seconds"
+      }
+    },
+    {
+      "RepairHistory": {
+        "id": 1,
+        "weaponId": 1,
+        "repairDate": "2025-03-05",
+        "repairType": "Replaced jammed extractor",
+        "technician": "John Davis"
+      }
+    },
+    {
+      "Range": {
+        "id": 1,
+        "location": "123 Gun Range Rd, Phoenix, AZ",
+        "rangeType": "Indoor",
+        "safetyMeasures": "Safety officers present, No smoking zone"
+      }
+    },
+    {
+      "UserFeedback": {
+        "id": 1,
+        "userId": 1,
+        "failureId": 1,
+        "feedback": "The failure was quite surprising and unsettling, but the staff handled it well.",
+        "rating": 4
+      }
+    }
+  ]
+  
+}

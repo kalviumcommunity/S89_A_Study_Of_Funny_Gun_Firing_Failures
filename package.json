@@ -1,14 +1,10 @@
 {
   "dependencies": {
-<<<<<<< HEAD
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.13.0"
   },
   "scripts": {
     "start": "node server.js"
-=======
-    "express": "^4.21.2"
->>>>>>> 6673e42839ef7eb2f392e1ff1b770710748a760c
   }
 }
