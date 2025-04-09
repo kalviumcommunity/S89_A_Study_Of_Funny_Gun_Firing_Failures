@@ -13,7 +13,7 @@ app.get("/ping",(req,res)=>{
 })
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://kushalmandala123:LGtfg7qwOjFM0NSn@cluster0.fbqxb.mongodb.net/', {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
