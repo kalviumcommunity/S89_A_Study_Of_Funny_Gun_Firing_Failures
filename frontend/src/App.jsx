@@ -1,8 +1,8 @@
 import { useState } from 'react'
-
 import './App.css'
 import { BrowserRouter } from 'react-router-dom'
 import AllRoutes from './AllRoutes'
+import Navbar from './components/Navbar'
 
 function App() {
 
@@ -10,7 +10,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
-          <AllRoutes/>
+      <Navbar/>
+      <AllRoutes/>
       </BrowserRouter>
     </>
   )
