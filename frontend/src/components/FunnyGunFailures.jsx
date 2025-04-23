@@ -8,7 +8,7 @@ const FunnyGunFailures = () => {
   useEffect(() => {
     const fetchFailures = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/funny');
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/api`);
         if (!res.ok) throw new Error('Failed to fetch data');
         const data = await res.json();
         setFailures(data);
@@ -20,6 +20,7 @@ const FunnyGunFailures = () => {
     };
 
     fetchFailures();
+    
   }, []);
 
   if (loading) return <p>Loading...</p>;
