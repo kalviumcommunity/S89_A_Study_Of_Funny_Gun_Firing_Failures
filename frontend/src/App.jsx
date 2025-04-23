@@ -3,6 +3,7 @@ import './App.css'
 import { BrowserRouter } from 'react-router-dom'
 import AllRoutes from './AllRoutes'
 import Navbar from './components/Navbar'
+import FunnyGunFailures from './components/FunnyGunFailures';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
       <Navbar/>
       <AllRoutes/>
+      <FunnyGunFailures/>
       </BrowserRouter>
     </>
   )

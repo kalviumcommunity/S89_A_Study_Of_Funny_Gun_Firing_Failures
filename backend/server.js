@@ -1,17 +1,18 @@
 // server.js
 const express = require('express');
 const mongoose = require('mongoose');
-const routes = require('./routes');  // Import the routes
-
+const routes = require('./routes');
 const app = express();
-
-// Middleware to parse JSON request bodies
+require('dotenv').config();
+const cors = require('cors');
+app.use(cors());
 app.use(express.json());
 
 app.get("/ping",(req,res)=>{
     res.send("pong")
 })
 
+console.log(process.env.MONGO_URL)
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,

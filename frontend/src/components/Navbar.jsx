@@ -8,7 +8,7 @@ const Navbar = () => {
     >
         <button 
         onClick={()=>{
-            navigate("/")
+            navigate("/")  //("/homepage" for geting homepage data)
         }}>Home</button>
         <button 
         onClick={()=>navigate("/about")}
