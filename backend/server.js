@@ -12,7 +12,6 @@ app.get("/ping",(req,res)=>{
     res.send("pong")
 })
 
-console.log(process.env.MONGO_URL)
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,

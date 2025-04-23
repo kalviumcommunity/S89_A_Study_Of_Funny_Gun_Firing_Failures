@@ -23,7 +23,7 @@ router.post('/funny', async (req, res) => {
 
 
 // 2. Read all Funny Gun Firing Failures
-router.get('/funny', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const failures = await FunnyGunFailure.find();
     res.status(200).json(failures);
