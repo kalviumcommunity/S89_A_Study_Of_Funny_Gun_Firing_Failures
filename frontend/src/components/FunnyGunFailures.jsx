@@ -10,9 +10,10 @@ const FunnyGunFailures = () => {
 
   const fetchFailures = async () => {
     try {
-      const res = await fetch(`${import.meta.env.VITE_BASE_URL}/api`);
+      const res = await fetch(`${import.meta.env.VITE_BASE_URL}`);
       if (!res.ok) throw new Error('Failed to fetch data');
       const data = await res.json();
+      console.log(data)
       setFailures(data);
     } catch (err) {
       setError(err.message);
@@ -49,7 +50,7 @@ const FunnyGunFailures = () => {
       <ul>
         {failures.map((failure) => (
           <li key={failure._id}>
-            <strong>{failure.title}</strong> - {failure.comment}
+            <strong>{failure.description}</strong> - {failure.failureType}
             <button onClick={() => navigate(`/edit/${failure._id}`)}>Edit</button>
             <button onClick={() => handleDelete(failure._id)}>Delete</button>
           </li>

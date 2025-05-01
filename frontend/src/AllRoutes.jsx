@@ -13,7 +13,7 @@ const AllRoutes = () => {
           <Route path = "/about" element={<About/>}/>
           <Route path = "/homepage" element={<Homepage/>}/>
           <Route path='/add-failure'element={<AddForm/>}/>
-          <Route path='//edit/:id' element={<UpdateForm/>}/>
+          <Route path='/edit/:id' element={<UpdateForm/>}/>
         </Routes>
    </div>
   )
