@@ -8,7 +8,7 @@ router.post('/funny', async (req, res) => {
   try {
       const { description, failureType, remainder } = req.body;
 
-      if (!description || !failureType || !remainder) {
+      if (!remainder || !description || !failureType ) {
           return res.status(400).json({ error: "All fields are required" });
       }
 
@@ -37,7 +37,7 @@ router.get('/funny/:id', async (req, res) => {
   try {
     const failure = await FunnyGunFailure.findById(req.params.id);
     if (!failure) {
-      return res.status(404).json({ message: 'Failure not found' });
+      return res.status(404).json({ message: 'Failure is not found' });
     }
     res.status(200).json(failure);
   } catch (error) {
@@ -57,7 +57,7 @@ router.put('/funny/:id', async (req, res) => {
     );
 
     if (!updatedFailure) {
-      return res.status(404).json({ message: 'Failure not found' });
+      return res.status(404).json({ message: 'Failure is not found' });
     }
 
     res.status(200).json(updatedFailure);
@@ -71,7 +71,7 @@ router.delete('/funny/:id', async (req, res) => {
   try {
     const deletedFailure = await FunnyGunFailure.findByIdAndDelete(req.params.id);
     if (!deletedFailure) {
-      return res.status(404).json({ message: 'Failure not found' });
+      return res.status(404).json({ message: 'Failure is not found' });
     }
     res.status(200).json({ message: 'Failure deleted successfully' });
   } catch (error) {
